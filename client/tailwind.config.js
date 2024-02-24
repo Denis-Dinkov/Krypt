@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import forms from "@tailwindcss/forms";
+
 export default {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   mode: "jit",
@@ -32,5 +34,5 @@ export default {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [forms],
 };
