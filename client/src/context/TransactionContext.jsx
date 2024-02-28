@@ -19,8 +19,9 @@ const createEthereumContract = () => {
   return transactionsContract;
 };
 
+// eslint-disable-next-line react/prop-types
 export const TransactionsProvider = ({ children }) => {
-  const [formData, setformData] = useState({
+  const [formData, setFormData] = useState({
     addressTo: "",
     amount: "",
     keyword: "",
@@ -34,7 +35,7 @@ export const TransactionsProvider = ({ children }) => {
   const [transactions, setTransactions] = useState([]);
 
   const handleChange = (e, name) => {
-    setformData((prevState) => ({ ...prevState, [name]: e.target.value }));
+    setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
   };
 
   const getAllTransactions = async () => {
@@ -159,7 +160,6 @@ export const TransactionsProvider = ({ children }) => {
           await transactionsContract.getTransactionCount();
 
         setTransactionCount(transactionsCount.toNumber());
-        window.location.reload();
       } else {
         console.log("No ethereum object");
       }
