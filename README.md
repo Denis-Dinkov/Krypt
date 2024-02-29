@@ -1,6 +1,4 @@
-# Demo
-
-URL: krypt-puce.vercel.app
+# Demo - https://krypt-puce.vercel.app/
 
 # Crypt Web3 dApp
 
