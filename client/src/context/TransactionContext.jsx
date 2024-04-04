@@ -59,8 +59,6 @@ export const TransactionsProvider = ({ children }) => {
           })
         );
 
-        console.log(structuredTransactions);
-
         setTransactions(structuredTransactions);
       } else {
         console.log("Ethereum is not present");
@@ -186,6 +184,7 @@ export const TransactionsProvider = ({ children }) => {
         sendTransaction,
         handleChange,
         formData,
+        getAllTransactions,
       }}
     >
       {children}

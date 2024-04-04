@@ -12,7 +12,7 @@ const useFetch = ({ keyword }) => {
           .join("")}&limit=1`
       );
       const data = await res.json();
-      setGifUrl(data[0]?.images?.downsized_medium?.url);
+      setGifUrl(data.data[0]?.images?.downsized_medium?.url);
     } catch (err) {
       console.error(err);
       setGifUrl("");
